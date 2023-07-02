@@ -19,7 +19,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Links
 
-- [Solution on Frontend Mentor]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/scss-order-summary-component-_UPKEQ9Dej)
 - [Live site](https://dudeldups.github.io/FM-order-summary-component/)
 
 ## My process
