@@ -1,0 +1,106 @@
+@use "resets";
+@use "colors";
+
+body {
+  padding: 2.5rem clamp(1rem, -0.5rem + 6.4vw, 1.5rem);
+  font: 500 1rem "Red Hat Display", sans-serif;
+  background: colors.$pale-blue
+    url("../assets/images/pattern-background-mobile.svg") top center/contain
+    no-repeat;
+  color: colors.$yet-another-blue;
+
+  @media only screen and (min-width: 31.25rem) {
+    background-image: url("../assets/images/pattern-background-desktop.svg");
+    display: grid;
+    place-content: center;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 28.125rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2.5rem 2rem 0rem rgba(colors.$dark-blue, 0.15);
+
+  &__content {
+    padding: clamp(2rem, -1rem + 12.8vw, 2.9rem)
+      clamp(1rem, -2.5rem + 17.92vw, 3rem);
+    background: white;
+    text-align: center;
+  }
+}
+
+.title {
+  color: colors.$dark-blue;
+  font-size: clamp(1.5rem, 0.56rem + 3.84vw, 1.8rem);
+  font-weight: 900;
+}
+
+.description {
+  margin-top: 1.25rem;
+  line-height: 1.5;
+}
+
+.options {
+  margin-top: 1.5rem;
+  padding: clamp(0.8rem, -0.5rem + 6.4vw, 1.5rem);
+  display: flex;
+  gap: 1.25em;
+  align-items: center;
+  background: colors.$very-pale-blue;
+  font-size: clamp(0.9rem, 0.6rem + 1.28vw, 1rem);
+  border-radius: 15px;
+
+  &__price {
+    line-height: 1.5;
+  }
+
+  &__plan {
+    display: block;
+    color: colors.$dark-blue;
+    font-weight: 900;
+  }
+
+  &__change {
+    margin-left: auto;
+    font-weight: 700;
+    color: colors.$bright-blue;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: rgba(colors.$bright-blue, 0.6);
+    }
+  }
+}
+
+.payment-button {
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 0.85rem;
+  width: 100%;
+  background: colors.$bright-blue;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 0.8rem 0.6rem 0.5rem rgba(colors.$bright-blue, 0.1);
+
+  &:hover,
+  &:focus {
+    background: rgba(colors.$bright-blue, 0.6);
+  }
+}
+
+.cancel-order {
+  display: block;
+  margin-top: 2rem;
+  font-weight: 700;
+  color: colors.$yet-another-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: colors.$dark-blue;
+  }
+}
